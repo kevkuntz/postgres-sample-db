@@ -1,0 +1,15 @@
+version: '3'
+services:
+  postgres_test_db:
+    container_name: testdb
+    image: postgres:12.1
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: dev
+      POSTGRES_PASSWORD: dev
+      POSTGRES_DB: test_data
+      #PGDATA: /tmp
+    volumes:
+      - ./docker-entrypoint-initdb.d/:/docker-entrypoint-initdb.d
