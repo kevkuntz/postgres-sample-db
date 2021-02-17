@@ -1,6 +1,6 @@
 # Test Datenbank für Postgres
 
-Für den Docker Container wird das aktuelle Postgres Image postgres:13 genutzt.
+Für den Docker Container wird das Postgres Image postgres:12.1 genutzt.
 Über die Environment Variablen der docker-compose werden die User Credentials gesetzt sowie der Name der Datenbank.
 
 ```
