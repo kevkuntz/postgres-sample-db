@@ -1,7 +1,7 @@
 # Test Datenbank für Postgres
 
-Für den Docker Container wird das Postgres Image postgres:12.1 genutzt.
-Über die Environment Variablen der docker-compose werden die User Credentials gesetzt sowie der Name der Datenbank.
+Für den Docker Container wird das Postgres Image [postgres:12.1](https://hub.docker.com/_/postgres) genutzt.
+Über die Environment Variablen der docker-compose werden die User Credentials gesetzt sowie der Name der Datenbank (test_data).
 
 ```
       POSTGRES_USER: dev
@@ -22,6 +22,17 @@ docker-compose up
 ```
 docker rm testdb
 ```
+
+### Adminer
+
+In der docker-compose ist zusätzlich das Tool [Adminer](https://hub.docker.com/_/adminer) enthalten.
+Dies ist ein leichtgewichtiges Tool zum visualisieren der Datenbank.
+Soll dies benutzt werden, so muss die entsprechende Sektion in der docker-compose einkommentiert werden.
+Danach ist Adminer unter `localhost:7000` über einen beliebigen Browser zu erreichen.
+Die Datenbank muss innerhalb von Docker Containern mit dem Container-Namen `testdb` angesprochen werden.
+Der DNS vom Dockerdeamon löst diesen Namen anschließend auf.
+
+![Adminer](./img/adminer.PNG)
 
 ### Initialisieren
 
