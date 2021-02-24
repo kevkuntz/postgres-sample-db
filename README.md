@@ -28,7 +28,7 @@ docker rm testdb
 In der docker-compose ist zusätzlich das Tool [Adminer](https://hub.docker.com/_/adminer) enthalten.
 Dies ist ein leichtgewichtiges Tool zum visualisieren der Datenbank.
 Soll dies benutzt werden, so muss die entsprechende Sektion in der docker-compose einkommentiert werden.
-Danach ist Adminer unter `localhost:7000` über einen beliebigen Browser zu erreichen.
+Danach ist Adminer unter [localhost:6002](http://localhost:6002) über einen beliebigen Browser zu erreichen.
 Die Datenbank muss innerhalb von Docker Containern mit dem Container-Namen `testdb` angesprochen werden.
 Der DNS vom Dockerdeamon löst diesen Namen anschließend auf.
 

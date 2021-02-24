@@ -19,4 +19,4 @@ services:
 #    image: adminer
 #    restart: always
 #    ports:
-#      - 7000:8080
+#      - 6002:8080
